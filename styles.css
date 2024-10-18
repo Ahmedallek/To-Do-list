@@ -1,0 +1,151 @@
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100%; /* S'assure que le body prend 100% de la largeur */
+  min-height: 100vh; /* S'assure que le body prend au moins 100% de la hauteur de l'écran */
+  background: linear-gradient(135deg, #153677, #4e085f);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+  padding: 0;
+  background-size: contain;
+}
+
+.todoapp {
+  max-width: 100%;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+.todoapp h2 {
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  height: 10px;
+  width: 350px;
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin: 30px;
+}
+
+.todoapp h2 img {
+  width: 30px;
+  margin: left 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: orange;
+  font-size: 16px;
+  border-radius: 40px;
+  transition: 0.3 ease;
+  cursor: pointer;
+}
+button:hover {
+  transition: 0.1s;
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+button:active {
+  transform: scale(1);
+}
+
+button a {
+  size: cover;
+}
+
+ul {
+  padding-left: 0;
+}
+
+ul li {
+  list-style: none;
+  font-size: none;
+  padding: 12px 8px 12px 50px; /* Ajuste le padding à gauche pour laisser de l'espace pour l'image */
+  user-select: none;
+  cursor: pointer;
+  position: relative; /* Nécessaire pour positionner l'image relative à chaque li */
+  background: #edeef0;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked-41.png);
+  background-size: cover;
+  background-position: center;
+  top: 50%; /* Centre l'image verticalement par rapport à l'élément li */
+  transform: translateY(-50%); /* Pour centrer verticalement */
+  left: 8px; /* Positionne l'image à gauche */
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(images/Sign-check-icon.png);
+}
+
+.todoapp:hover {
+  transition: 0.2s;
+  transform: scale(1.05);
+}
+
+.todoapp {
+  transition: 0.2s;
+  transform: scale(1);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  margin-right: 9px;
+}
+
+ul li span:hover {
+  background: grey;
+  border-radius: 25px;
+  margin-right: 9px;
+}
